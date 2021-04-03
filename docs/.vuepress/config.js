@@ -41,6 +41,9 @@ module.exports = {
                 {
                     title: '前端技术',
                     collapsable: false,
+                    children: [
+                        'stock'
+                    ]
                 },
             ]
         },
