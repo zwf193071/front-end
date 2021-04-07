@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 前端技术
+heroText: 技术网站
 heroImage: /logo.png
 tagline: 说明文档
 actionText: 立即开始

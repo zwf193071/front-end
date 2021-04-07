@@ -38,7 +38,8 @@ function findMaxCrossSubarray(list, low, mid, high) {
  * @return {number[]}
  **/
 function findMaxSubarray(list, low, high) {
-    // 若数组长度为1, 则返回[最小下标值, 最大下标值, 最大和值], 在递归算法中, 必须得设置一个基线值, 跳出循环. high === low便是该基线值.
+    // 若数组长度为1, 则返回[最小下标值, 最大下标值, 最大和值]
+    // 在递归算法中, 必须得设置一个基线值, 跳出循环. high === low便是该基线值.
     if (high === low) return [low, high, list[low]];
     let mid = Math.floor((low + high) / 2);
     let [leftLow, leftHigh, leftSum] = findMaxSubarray(list, low, mid);
@@ -53,6 +54,19 @@ function findMaxSubarray(list, low, high) {
         return [crossLow, crossHigh, crossSum];
     }
 
+}
+~~~
+
+## 动态规划（Kadane's Algorithm）
+~~~Js
+var maxSubArray = function (nums) {
+    let max_sum = cur_max = nums[0];
+    for (let i = 1, len = nums.length; i < len; i++) {
+        // 每一小块中，求取当前最大值，循环递归，最后必将是最大和的子数组
+        cur_max = Math.max(nums[i], nums[i] + cur_max);
+        max_sum = Math.max(cur_max, max_sum);
+    }
+    return max_sum;
 }
 ~~~
 

@@ -29,7 +29,7 @@ module.exports = {
                 text: '前端技术',
                 link: '/algorithm/',
                 items: [
-                    // {text: 'ES6', link: '/JS/ES6'},
+                    {text: '算法', link: '/algorithm/stock'},
                     // {text: 'Cesium', link: '/JS/Cesium'},
                     // {text: '前端代码规范', link: '/JS/CodeStandards'},
                     // {text: 'vscode插件推荐', link: '/JS/VSCodePlugins'},
